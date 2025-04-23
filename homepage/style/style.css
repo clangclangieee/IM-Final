@@ -1,0 +1,380 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: url('../media/index.jpeg') no-repeat center center/cover;
+  color: #fff;
+}
+
+/* Header */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 30px;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(10px);
+}
+
+.menu-icon {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.logo {
+  font-size: 32px;
+  font-weight: 800;
+  color: #ffb142;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  background: #222;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 300px;
+}
+
+.search-bar input {
+  border: none;
+  padding: 8px 12px;
+  width: 100%;
+  background: transparent;
+  color: #fff;
+}
+
+.search-bar button {
+  padding: 8px 12px;
+  background: #ff4757;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+}
+
+/* Top Nav */
+.top-nav a {
+  margin-left: 20px;
+  color: #fff;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.top-nav a:hover {
+  color: #ff6b81;
+}
+
+/* Sub Nav */
+.sub-nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  background: rgba(20, 20, 20, 0.8);
+  padding: 12px 0;
+}
+
+.sub-nav a {
+  color: #ffb142;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.sub-nav a:hover {
+  color: #fff;
+}
+
+/* Main Section */
+.stream-section {
+  padding: 40px 60px;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.stream-section h2 {
+  font-size: 28px;
+  color: #ff6b81;
+  margin-bottom: 20px;
+}
+
+/* Anime Grid */
+.anime-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 25px;
+}
+
+.anime-card {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+.anime-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: brightness(0.9);
+}
+
+.anime-card:hover {
+  transform: scale(1.03);
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  color: #fff;
+  padding: 10px;
+  font-size: 14px;
+  width: 100%;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .search-bar {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .anime-grid {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  }
+}
+.gallery {
+    display: flex;
+    flex-wrap: nowrap; /* Prevent wrapping to the next line */
+    overflow-x: auto; /* Allow horizontal scrolling if images overflow */
+    gap: 10px; /* Space between images */
+}
+
+.gallery img {
+    height: 200px; /* Set a fixed height for images */
+    width: auto; /* Maintain aspect ratio */
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+.profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+
+.profile-card {
+    background-color: #1c1c1c;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(255, 64, 129, 0.5);
+    color: white;
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+}
+
+.profile-card h2 {
+    color: #ff4081;
+    margin-bottom: 20px;
+}
+
+.profile-card p {
+    margin: 10px 0;
+}
+
+.profile-actions {
+    margin-top: 30px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff4081;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background-color: #ff66a1;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    border: 2px solid #ff4081;
+}
+
+.btn-secondary:hover {
+    background-color: #ff4081;
+}
+footer {
+    background: #1f1f1f;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+
+
+footer p {
+    font-size: 1rem;
+}
+.success {
+    color: #4CAF50;
+    margin-bottom: 10px;
+}
+
+.error {
+    color: #f44336;
+    margin-bottom: 10px;
+}
+
+form input[type="text"],
+form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0 15px 0;
+    border: none;
+    border-radius: 6px;
+    background-color: #2c2c2c;
+    color: white;
+}
+
+form label {
+    display: block;
+    text-align: left;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+form button.btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #ff4081;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+form button.btn:hover {
+    background-color: #ff66a1;
+}
+.profile-toggle {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+
+.toggle-icon {
+  font-size: 28px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.profile-menu {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  background-color: #00ffe0;
+  border-radius: 15px;
+  padding: 15px 20px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 999;
+  width: 200px;
+  animation: slideDown 0.3s ease;
+}
+
+.menu-btn {
+  background: #00e5c0;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.menu-btn:hover {
+  background: #00cfae;
+}
+
+.toggle-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #00e5c0;
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: bold;
+  color: black;
+}
+
+.logout {
+  background-color: #ff5555;
+}
+
+.logout:hover {
+  background-color: #dd4444;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+body.dark-mode {
+  background-color: #121212;
+  color: #eee;
+}
+
+body.dark-mode .profile-menu {
+  background-color: #222;
+}
+
+body.dark-mode .menu-btn,
+body.dark-mode .toggle-item {
+  background-color: #333;
+  color: #eee;
+}
+
+.profile-name {
+  margin-left: 10px;
+  font-weight: bold;
+  font-size: 1rem;
+  color: #fff;
+}
